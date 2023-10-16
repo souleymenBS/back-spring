@@ -16,7 +16,7 @@ pipeline{
     }
     stage ("generate backend image") {
       steps {
-        dir("backend"){
+        dir("back-spring"){
           sh "mvn clean install"
           sh "docker build -t backend ."
         }
@@ -24,7 +24,7 @@ pipeline{
     }
     stage ("run docker compose") { 
       steps {
-        dir("backend"){
+        dir("back-spring"){
           sh "docker compose up -d"
         }
       }
