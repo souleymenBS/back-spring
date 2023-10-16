@@ -25,7 +25,7 @@ pipeline{
     stage ("run docker compose") { 
       steps {
         dir("back-spring"){
-          sh "sudo docker compose up -d -s "
+          sh "sudo docker compose up -d -S "
         }
       }
     }
