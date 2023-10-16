@@ -21,7 +21,7 @@ mysql:
      MYSQL_DATABASE: 'api_etudiant'
      MYSQL_ROOT_USERNAME: 'root'
      MYSQL_ROOT_PASSWORD: 'root'
-  ports:
+   ports:
     - '0.0.0.0:3306:3306'
   volumes:
   - api_etudiant:/var/lib/mysql
