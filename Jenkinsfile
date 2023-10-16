@@ -18,14 +18,14 @@ pipeline{
       steps {
         dir("back-spring"){
           sh "mvn clean install"
-          sh "docker build -t backend ."
+          sh "docker build -t back-spring ."
         }
       }
     }
     stage ("run docker compose") { 
       steps {
         dir("back-spring"){
-          sh "sudo docker compose up -d -S "
+          sh "sudo docker compose up -d"
         }
       }
     }
